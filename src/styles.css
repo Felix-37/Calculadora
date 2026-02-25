@@ -10,7 +10,7 @@
     --secondary-gradient: linear-gradient(135deg, #0A192F 0%, #17365D 100%);
     --bg-dark: #06101e;
     --bg-card: rgba(10, 25, 47, 0.85);
-    --glass-bg: rgba(255, 255, 255, 0.06);
+    --glass-bg: rgba(0, 0, 0, 0.55);
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-hover: rgba(255, 255, 255, 0.12);
     --text-primary: #ffffff;
@@ -20,7 +20,7 @@
     --purple: #F57C00;
     --cyan: #4fc3f7;
     --gold: #ffd700;
-    --btn-number: rgba(255, 255, 255, 0.08);
+    --btn-number: rgba(0, 0, 0, 0.45);
     --btn-func: rgba(245, 124, 0, 0.25);
     --btn-operator: rgba(211, 47, 47, 0.35);
     --btn-equals: linear-gradient(135deg, #D32F2F, #F57C00);
@@ -42,7 +42,7 @@
 body {
     font-family: 'Outfit', sans-serif;
     background: transparent;
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
     overflow: hidden;
     user-select: none;
 }
@@ -164,7 +164,7 @@ body {
 
 .title-btn:hover {
     background: var(--glass-hover);
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
     transform: scale(1.1);
 }
 
@@ -223,7 +223,7 @@ body {
     font-size: 36px;
     font-weight: 700;
     text-align: right;
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
     text-shadow: 0 0 20px rgba(255, 107, 202, 0.5);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -283,7 +283,7 @@ body {
 .mode-toggle-btn:hover {
     background: rgba(196, 77, 255, 0.15);
     border-color: rgba(196, 77, 255, 0.3);
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
     box-shadow: var(--shadow-glow-purple);
 }
 
@@ -377,7 +377,7 @@ body {
 /* Number buttons */
 .btn.number {
     background: var(--btn-number);
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
 }
 
 .btn.number:hover {
@@ -546,7 +546,7 @@ body {
     font-family: 'Orbitron', monospace;
     font-size: 16px;
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-primary); text-shadow: 0 2px 4px rgba(0,0,0,0.9);
     text-shadow: 0 0 10px rgba(255, 107, 202, 0.3);
 }
 
@@ -653,6 +653,7 @@ body {
 .btn-cancel:hover { background: rgba(255,255,255,0.2); }
 .btn-accept { background: var(--gold); color: black; }
 .btn-accept:hover { filter: brightness(1.1); box-shadow: 0 0 15px rgba(255,215,0,0.4); }
+
 
 
 
