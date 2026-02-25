@@ -21,10 +21,6 @@
         "directories": {
             "output": "dist"
         },
-        "files": [
-            "src/**/*",
-            "assets/**/*"
-        ],
         "win": {
             "target": [
                 "nsis",

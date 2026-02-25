@@ -1,0 +1,15 @@
+  ÔÇó electron-builder  version=24.13.3 os=10.0.26200
+  ÔÇó loaded configuration  file=package.json ("build" field)
+  ÔÇó packaging       platform=win32 arch=x64 electron=28.3.3 appOutDir=dist\win-unpacked
+  Ô¿» Application entry file "src\main.js" in the "C:\Users\Felipe Chilito\Documents\Clases\Calculadora\dist\win-unpacked\resources\app.asar" does not exist. Seems like a wrong configuration.  failedTask=build stackTrace=Error: Application entry file "src\main.js" in the "C:\Users\Felipe Chilito\Documents\Clases\Calculadora\dist\win-unpacked\resources\app.asar" does not exist. Seems like a wrong configuration.
+    at error (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\asar\asarFileChecker.ts:7:12)
+    at checkFileInArchive (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\asar\asarFileChecker.ts:31:11)
+    at WinPackager.checkFileInPackage (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\platformPackager.ts:514:7)
+    at WinPackager.sanityCheckPackage (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\platformPackager.ts:562:5)
+    at WinPackager.doPack (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\platformPackager.ts:319:5)
+    at WinPackager.pack (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\platformPackager.ts:140:5)
+    at Packager.doBuild (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\packager.ts:445:9)
+    at executeFinally (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\builder-util\src\promise.ts:12:14)
+    at Packager._build (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\packager.ts:379:31)
+    at Packager.build (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\app-builder-lib\src\packager.ts:340:12)
+    at executeFinally (C:\Users\Felipe Chilito\Documents\Clases\Calculadora\node_modules\builder-util\src\promise.ts:12:14)
