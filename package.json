@@ -2,11 +2,11 @@
     "name": "super-calculadora-anime",
     "version": "1.0.0",
     "description": "Super Calculadora Moderna con estilo Anime para Windows 11",
-    "main": "main.js",
+    "main": "src/main.js",
     "scripts": {
         "start": "electron .",
         "build": "electron-builder --win --x64",
-        "build:msi": "electron-builder --win nsis --x64"
+        "compile": "node scripts/generate-icon.js && npx electron-builder --win nsis --x64"
     },
     "author": "Felipe Chilito",
     "license": "MIT",
