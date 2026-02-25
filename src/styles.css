@@ -52,10 +52,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: var(--bg-dark);
-    background-image:
-        radial-gradient(ellipse at 20% 50%, rgba(196, 77, 255, 0.15) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(255, 107, 157, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 80%, rgba(0, 210, 255, 0.1) 0%, transparent 50%);
+    background-image: radial-gradient(ellipse at 20% 50%, rgba(211, 47, 47, 0.15) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(251, 192, 45, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 50% 80%, rgba(13, 71, 161, 0.15) 0%, transparent 50%);
     position: relative;
     border-radius: 12px;
     overflow: hidden;
@@ -98,7 +95,8 @@ body {
 }
 
 /* ---- Anime Decoration ---- */
-.anime-decoration { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.15; pointer-events: none; transition: opacity 0.5s ease; mix-blend-mode: soft-light; }
+.anime-decoration { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; opacity: 0.85;
+    mix-blend-mode: normal; }
 
 .anime-decoration:hover {
     opacity: 0.35;
@@ -655,4 +653,6 @@ body {
 .btn-cancel:hover { background: rgba(255,255,255,0.2); }
 .btn-accept { background: var(--gold); color: black; }
 .btn-accept:hover { filter: brightness(1.1); box-shadow: 0 0 15px rgba(255,215,0,0.4); }
+
+
 
