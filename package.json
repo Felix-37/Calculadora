@@ -6,7 +6,7 @@
     "scripts": {
         "start": "electron .",
         "build": "electron-builder --win --x64",
-        "compile": "npx electron-builder --win nsis --x64"
+        "compile": "npx electron-builder --win --x64"
     },
     "author": "Felipe Chilito",
     "license": "MIT",
@@ -27,12 +27,8 @@
         ],
         "win": {
             "target": [
-                {
-                    "target": "nsis",
-                    "arch": [
-                        "x64"
-                    ]
-                }
+                "nsis",
+                "msi"
             ],
             "icon": "assets/icon.png"
         },
@@ -41,6 +37,10 @@
             "perMachine": false,
             "allowToChangeInstallationDirectory": true,
             "artifactName": "${productName} Setup.${ext}"
+        },
+        "msi": {
+            "oneClick": false,
+            "perMachine": false
         },
         "publish": [
             {
