@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Calculadora Anime</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Orbitron:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Animated background particles -->
+        <div class="particles" id="particles"></div>
+
+        <!-- Anime character decoration -->
+        <div class="anime-decoration">
+            <img src="assets/anime-bg.svg" alt="Anime Character" class="anime-character">
+        </div>
+
+        <!-- Title Bar -->
+        <div class="title-bar">
+            <div class="title-bar-text">
+                <span class="title-icon">✧</span>
+                <span>Super Calculadora</span>
+                <span class="title-icon">✧</span>
+            </div>
+            <div class="title-bar-buttons">
+                <button class="title-btn minimize" onclick="minimizeWindow()" title="Minimizar">
+                    <svg width="12" height="12" viewBox="0 0 12 12">
+                        <rect y="5" width="12" height="2" fill="currentColor" />
+                    </svg>
+                </button>
+                <button class="title-btn maximize" onclick="maximizeWindow()" title="Maximizar">
+                    <svg width="12" height="12" viewBox="0 0 12 12">
+                        <rect x="1" y="1" width="10" height="10" stroke="currentColor" stroke-width="1.5" fill="none" />
+                    </svg>
+                </button>
+                <button class="title-btn close" onclick="closeWindow()" title="Cerrar">
+                    <svg width="12" height="12" viewBox="0 0 12 12">
+                        <path d="M1 1L11 11M11 1L1 11" stroke="currentColor" stroke-width="1.5" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Calculator Container -->
+        <div class="calculator">
+            <!-- Display -->
+            <div class="display-container">
+                <div class="expression" id="expression"></div>
+                <div class="display" id="display">0</div>
+                <div class="mode-indicator">
+                    <span id="modeLabel" class="mode-badge">BÁSICA</span>
+                    <span id="angleLabel" class="angle-badge">DEG</span>
+                </div>
+            </div>
+
+            <!-- Mode Toggle -->
+            <div class="mode-toggle-container">
+                <button class="mode-toggle-btn" id="modeToggle" onclick="toggleMode()">
+                    <span class="toggle-text" id="toggleText">🔬 Modo Científico</span>
+                </button>
+            </div>
+
+            <!-- Scientific Panel (hidden by default) -->
+            <div class="scientific-panel" id="scientificPanel">
+                <div class="sci-row">
+                    <button class="btn sci" onclick="calcFunction('sin')">sin</button>
+                    <button class="btn sci" onclick="calcFunction('cos')">cos</button>
+                    <button class="btn sci" onclick="calcFunction('tan')">tan</button>
+                    <button class="btn sci" onclick="toggleAngle()">
+                        <span id="angleBtnLabel">DEG</span>
+                    </button>
+                </div>
+                <div class="sci-row">
+                    <button class="btn sci" onclick="calcFunction('log')">log</button>
+                    <button class="btn sci" onclick="calcFunction('ln')">ln</button>
+                    <button class="btn sci" onclick="calcFunction('sqrt')">√</button>
+                    <button class="btn sci" onclick="calcFunction('square')">x²</button>
+                </div>
+                <div class="sci-row">
+                    <button class="btn sci" onclick="calcFunction('pow')">xⁿ</button>
+                    <button class="btn sci" onclick="calcFunction('factorial')">n!</button>
+                    <button class="btn sci" onclick="insertConstant('pi')">π</button>
+                    <button class="btn sci" onclick="insertConstant('e')">e</button>
+                </div>
+                <div class="sci-row">
+                    <button class="btn sci" onclick="calcFunction('abs')">|x|</button>
+                    <button class="btn sci" onclick="calcFunction('inv')">1/x</button>
+                    <button class="btn sci" onclick="calcFunction('cbrt')">∛</button>
+                    <button class="btn sci" onclick="calcFunction('exp')">eˣ</button>
+                </div>
+            </div>
+
+            <!-- Main Buttons -->
+            <div class="buttons-grid">
+                <button class="btn func" onclick="clearAll()">AC</button>
+                <button class="btn func" onclick="toggleSign()">±</button>
+                <button class="btn func" onclick="inputPercent()">%</button>
+                <button class="btn operator" onclick="inputOperator('÷')">÷</button>
+
+                <button class="btn number" onclick="inputNumber('7')">7</button>
+                <button class="btn number" onclick="inputNumber('8')">8</button>
+                <button class="btn number" onclick="inputNumber('9')">9</button>
+                <button class="btn operator" onclick="inputOperator('×')">×</button>
+
+                <button class="btn number" onclick="inputNumber('4')">4</button>
+                <button class="btn number" onclick="inputNumber('5')">5</button>
+                <button class="btn number" onclick="inputNumber('6')">6</button>
+                <button class="btn operator" onclick="inputOperator('−')">−</button>
+
+                <button class="btn number" onclick="inputNumber('1')">1</button>
+                <button class="btn number" onclick="inputNumber('2')">2</button>
+                <button class="btn number" onclick="inputNumber('3')">3</button>
+                <button class="btn operator" onclick="inputOperator('+')">+</button>
+
+                <button class="btn number zero" onclick="inputNumber('0')">0</button>
+                <button class="btn number" onclick="inputDecimal()">.</button>
+                <button class="btn equals" onclick="calculate()">=</button>
+            </div>
+
+            <!-- History Panel -->
+            <div class="history-panel" id="historyPanel">
+                <div class="history-header">
+                    <span>📜 Historial</span>
+                    <button class="clear-history" onclick="clearHistory()">Limpiar</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <div class="history-empty">Sin cálculos aún ✨</div>
+                </div>
+            </div>
+
+            <!-- History Toggle -->
+            <div class="history-toggle">
+                <button class="history-toggle-btn" onclick="toggleHistory()">
+                    📜 Historial
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+
+</html>

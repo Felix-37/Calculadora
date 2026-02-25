@@ -1,0 +1,8 @@
+﻿  ÔÇó electron-builder  version=24.13.3 os=10.0.26200
+  ÔÇó loaded configuration  file=package.json ("build" field)
+  ÔÇó packaging       platform=win32 arch=x64 electron=28.3.3 appOutDir=dist\win-unpacked
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z size=5.6 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/winCodeSign-2.6.0/winCodeSign-2.6.0.7z duration=986ms
+  ÔÇó building        target=MSI arch=x64 file=dist\Super Calculadora Anime 1.0.0.msi
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/wix-4.0.0.5512.2/wix-4.0.0.5512.2.7z size=2.2 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/wix-4.0.0.5512.2/wix-4.0.0.5512.2.7z duration=692ms

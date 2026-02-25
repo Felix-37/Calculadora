@@ -1,0 +1,9 @@
+  ÔÇó electron-builder  version=24.13.3 os=10.0.26200
+  ÔÇó loaded configuration  file=package.json ("build" field)
+  ÔÇó packaging       platform=win32 arch=x64 electron=28.3.3 appOutDir=dist\win-unpacked
+  ÔÇó building        target=nsis file=dist\Super Calculadora Anime Setup.exe archs=x64 oneClick=false perMachine=false
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-3.0.4.1/nsis-3.0.4.1.7z size=1.3 MB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-3.0.4.1/nsis-3.0.4.1.7z duration=1.543s
+  ÔÇó downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-resources-3.4.1/nsis-resources-3.4.1.7z size=731 kB parts=1
+  ÔÇó downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-resources-3.4.1/nsis-resources-3.4.1.7z duration=750ms
+  ÔÇó building block map  blockMapFile=dist\Super Calculadora Anime Setup.exe.blockmap
