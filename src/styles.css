@@ -6,28 +6,28 @@
 
 /* ---- Root Variables ---- */
 :root {
-    --primary-gradient: linear-gradient(135deg, #ff6b9d 0%, #c44dff 50%, #6e3aff 100%);
-    --secondary-gradient: linear-gradient(135deg, #00d2ff 0%, #7b2ff7 100%);
-    --bg-dark: #0a0015;
-    --bg-card: rgba(20, 5, 40, 0.85);
+    --primary-gradient: linear-gradient(135deg, #D32F2F 0%, #F57C00 50%, #FBC02D 100%);
+    --secondary-gradient: linear-gradient(135deg, #0A192F 0%, #17365D 100%);
+    --bg-dark: #06101e;
+    --bg-card: rgba(10, 25, 47, 0.85);
     --glass-bg: rgba(255, 255, 255, 0.06);
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-hover: rgba(255, 255, 255, 0.12);
     --text-primary: #ffffff;
     --text-secondary: rgba(255, 255, 255, 0.7);
-    --text-accent: #ff6bca;
-    --pink: #ff6b9d;
-    --purple: #c44dff;
-    --cyan: #00d2ff;
+    --text-accent: #FBC02D;
+    --pink: #D32F2F;
+    --purple: #F57C00;
+    --cyan: #4fc3f7;
     --gold: #ffd700;
     --btn-number: rgba(255, 255, 255, 0.08);
-    --btn-func: rgba(196, 77, 255, 0.25);
-    --btn-operator: rgba(255, 107, 157, 0.35);
-    --btn-equals: linear-gradient(135deg, #ff6b9d, #c44dff);
-    --btn-sci: rgba(0, 210, 255, 0.15);
-    --shadow-glow-pink: 0 0 20px rgba(255, 107, 157, 0.3);
-    --shadow-glow-purple: 0 0 20px rgba(196, 77, 255, 0.3);
-    --shadow-glow-cyan: 0 0 15px rgba(0, 210, 255, 0.3);
+    --btn-func: rgba(245, 124, 0, 0.25);
+    --btn-operator: rgba(211, 47, 47, 0.35);
+    --btn-equals: linear-gradient(135deg, #D32F2F, #F57C00);
+    --btn-sci: rgba(79, 195, 247, 0.15);
+    --shadow-glow-pink: 0 0 20px rgba(211, 47, 47, 0.3);
+    --shadow-glow-purple: 0 0 20px rgba(245, 124, 0, 0.3);
+    --shadow-glow-cyan: 0 0 15px rgba(79, 195, 247, 0.3);
     --border-radius: 16px;
     --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -52,7 +52,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: var(--bg-dark);
-    background-image: 
+    background-image:
         radial-gradient(ellipse at 20% 50%, rgba(196, 77, 255, 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 20%, rgba(255, 107, 157, 0.1) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 80%, rgba(0, 210, 255, 0.1) 0%, transparent 50%);
@@ -82,12 +82,15 @@ body {
         transform: translateY(100vh) rotate(0deg);
         opacity: 0;
     }
+
     10% {
         opacity: 0.6;
     }
+
     90% {
         opacity: 0.4;
     }
+
     100% {
         transform: translateY(-10vh) rotate(720deg);
         opacity: 0;
@@ -147,8 +150,15 @@ body {
 }
 
 @keyframes sparkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
 }
 
 .title-bar-buttons {
@@ -249,7 +259,8 @@ body {
     margin-top: 8px;
 }
 
-.mode-badge, .angle-badge {
+.mode-badge,
+.angle-badge {
     font-size: 10px;
     font-weight: 600;
     letter-spacing: 2px;
@@ -305,8 +316,8 @@ body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                opacity 0.3s ease;
+        margin 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.3s ease;
     opacity: 0;
     margin-bottom: 0;
 }
@@ -372,7 +383,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, rgba(255,255,255,0.2), transparent 70%);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2), transparent 70%);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -440,7 +451,7 @@ body {
 .btn.operator.active {
     background: rgba(255, 107, 157, 0.5);
     box-shadow: var(--shadow-glow-pink),
-                inset 0 0 15px rgba(255, 107, 157, 0.2);
+        inset 0 0 15px rgba(255, 107, 157, 0.2);
     border-color: rgba(255, 107, 157, 0.5);
 }
 
@@ -451,7 +462,7 @@ body {
     font-size: 24px;
     font-weight: 700;
     border: none;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .btn.equals:hover {
@@ -477,7 +488,7 @@ body {
     border: 1px solid var(--glass-border);
     backdrop-filter: blur(20px);
     transition: max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                padding 0.4s ease;
+        padding 0.4s ease;
     z-index: 20;
     padding: 0 16px;
 }
@@ -592,12 +603,15 @@ body {
 
 /* ---- Animations ---- */
 @keyframes pulseGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         box-shadow: 0 0 5px rgba(255, 107, 157, 0.2);
     }
+
     50% {
         box-shadow: 0 0 20px rgba(255, 107, 157, 0.4),
-                    0 0 40px rgba(196, 77, 255, 0.2);
+            0 0 40px rgba(196, 77, 255, 0.2);
     }
 }
 
@@ -607,6 +621,7 @@ body {
         transform: scale(0);
         opacity: 0.5;
     }
+
     100% {
         transform: scale(4);
         opacity: 0;
@@ -619,6 +634,7 @@ body {
         opacity: 0;
         transform: translateY(-5px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -642,3 +658,16 @@ body {
     background: rgba(196, 77, 255, 0.3);
     border-radius: 3px;
 }
+/* ---- Update Modal ---- */
+.update-modal { position: absolute; inset: 0; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); z-index: 100; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.update-modal.show { opacity: 1; pointer-events: auto; }
+.update-content { background: var(--bg-card); border: 1px solid var(--glass-border); border-radius: 16px; padding: 24px; max-width: 320px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+.update-content h3 { color: var(--gold); margin-bottom: 12px; font-family: 'Orbitron', monospace; }
+.update-content p { color: var(--text-secondary); font-size: 14px; margin-bottom: 20px; line-height: 1.5; }
+.update-checkbox { display: flex; align-items: center; gap: 8px; margin-bottom: 24px; font-size: 12px; color: var(--text-secondary); text-align: left; }
+.update-buttons { display: flex; gap: 12px; }
+.update-btn { flex: 1; padding: 10px; border: none; border-radius: 8px; font-family: 'Outfit', sans-serif; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+.btn-cancel { background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); }
+.btn-cancel:hover { background: rgba(255,255,255,0.2); }
+.btn-accept { background: var(--gold); color: black; }
+.btn-accept:hover { filter: brightness(1.1); box-shadow: 0 0 15px rgba(255,215,0,0.4); }

@@ -529,3 +529,22 @@ document.addEventListener('keydown', (e) => {
 // ---- Init ----
 initParticles();
 updateDisplay();
+
+// ---- Auto Updater ----
+if (window.electronAPI && window.electronAPI.onUpdateAvailable) {
+    window.electronAPI.onUpdateAvailable(() => {
+        document.getElementById('updateModal').classList.add('show');
+    });
+}
+
+function acceptUpdate() {
+    const autoUpdate = document.getElementById('autoUpdateCheck').checked;
+    if (window.electronAPI) window.electronAPI.sendUpdateResponse(true, autoUpdate);
+    document.getElementById('updateModal').classList.remove('show');
+}
+
+function cancelUpdate() {
+    const autoUpdate = document.getElementById('autoUpdateCheck').checked;
+    if (window.electronAPI) window.electronAPI.sendUpdateResponse(false, autoUpdate);
+    document.getElementById('updateModal').classList.remove('show');
+}

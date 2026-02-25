@@ -20,7 +20,7 @@
 
         <!-- Anime character decoration -->
         <div class="anime-decoration">
-            <img src="../assets/anime-bg.svg" alt="Anime Character" class="anime-character">
+            <img src="../assets/one-piece-bg.png" alt="One Piece Background" class="anime-character">
         </div>
 
         <!-- Title Bar -->
@@ -141,6 +141,22 @@
                 <button class="history-toggle-btn" onclick="toggleHistory()">
                     📜 Historial
                 </button>
+            </div>
+        </div>
+        <!-- Update Modal -->
+        <div class="update-modal" id="updateModal">
+            <div class="update-content">
+                <h3>⛵ ¡Nueva Actualización!</h3>
+                <p>Hay un nuevo botín pirata esperándote (Actualización disponible). ¿Deseas descargarlo e instalarlo
+                    ahora?</p>
+                <div class="update-checkbox">
+                    <input type="checkbox" id="autoUpdateCheck">
+                    <label for="autoUpdateCheck">Actualizar automáticamente las próximas veces</label>
+                </div>
+                <div class="update-buttons">
+                    <button class="update-btn btn-cancel" onclick="cancelUpdate()">Quizás luego</button>
+                    <button class="update-btn btn-accept" onclick="acceptUpdate()">¡Al abordaje!</button>
+                </div>
             </div>
         </div>
     </div>
